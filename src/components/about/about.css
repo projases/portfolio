@@ -1,0 +1,44 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100svh;
+    gap: 40px;
+    padding-top: 0;
+}
+
+h2 {
+    display: flex;
+    font-family: "Loyal sans", sans-serif;
+    font-size: calc(var(--titleFontSize) - 40px);
+    color: var(--titleFontColor);
+    font-weight: var(--titleFontWeight);
+    /* border: 2px solid red; */
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px 0 10px;
+    /* width: 900px; */
+}
+
+.aboutButtonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* border: 2px solid green; */
+    /* width: 50%; */
+    /* margin-top: 20px; */
+}
+/* .aboutButtonContainer > button {
+    width: 400px;
+    height: 100px;
+} */
+
+@media (max-width: 900px) {
+    .aboutButtonContainer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

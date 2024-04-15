@@ -1,0 +1,70 @@
+:root {
+    /* --bigButtonWidth: 400px;
+    --bigButtonHeight: 100px;
+    --normalButtonWidth: 200px;
+    --normalButtonHeight: 50px; */
+}
+button {
+    border: 1px solid var(--secondaryColor);
+    background-color: transparent;
+    color: var(--secondaryColor);
+    font-size: var(--textSize);
+    position: relative;
+    /* width: 200px; */
+    /* height: 50px; */
+    transition:
+        background-color 1s ease,
+        transform 0.5s ease;
+    /* Separate transitions */
+    animation: moveGradient 5s linear infinite;
+    /* Animation for moving gradient */
+    /* border-radius: 10px; */
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+button > svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff; /* Update stroke color */
+    stroke-dasharray: 150 1000;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 1px solid #886600;
+    background: linear-gradient(
+        to right,
+        #080808 0%,
+        #000000 50%,
+        #080808 100%
+    );
+    color: var(--fontColor);
+    transform: scale(1.1);
+    /* Scale up on hover */
+    transition: 1s ease-in-out;
+    background: var(--primaryColor);
+}
+
+.buttonCTO:hover svg {
+    stroke-dashoffset: -500;
+}
+
+.mediumButtonCTO:hover svg {
+    stroke-dashoffset: -750;
+}
+
+.bigButtonCTO:hover svg {
+    stroke-dashoffset: -1000;
+}

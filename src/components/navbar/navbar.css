@@ -1,0 +1,26 @@
+.navbar {
+    font-weight: var(--fontWeight);
+    color: var(--fontColor);
+    font-size: var(--textSize);
+    top: 0;
+    padding: 20px;
+    background-color: var(--navBarColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    /* height: 100%; */
+    width: 100%;
+    /* border: 2px solid green; */
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
+a:hover {
+    cursor: pointer;
+}

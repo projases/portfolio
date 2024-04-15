@@ -1,0 +1,25 @@
+:root {
+    --subtitleFontSize: 30px;
+    --slashFontWeight: 1000;
+}
+
+@font-face {
+    font-family: "Loyal sans";
+    src: url("/loyal_sans/LoyalSansRegularv1.otf") format("opentype");
+}
+
+span {
+    color: var(--fontColor);
+    font-weight: var(--slashFontWeight);
+}
+
+p {
+    font-family: "Loyal sans", sans-serif;
+    font-style: italic;
+    font-size: var(--subtitleFontSize);
+    color: var(--titleFontColor);
+    font-weight: var(--titleFontWeight);
+    text-align: center;
+    letter-spacing: 6px;
+    margin: 0;
+}

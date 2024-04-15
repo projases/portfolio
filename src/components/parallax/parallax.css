@@ -1,0 +1,8 @@
+.parallaxSection {
+    background-image: url("https://images.pexels.com/photos/8353772/pexels-photo-8353772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: auto; /* Corrected typo */
+    margin-top: 60px;
+}

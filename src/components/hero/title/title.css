@@ -1,0 +1,26 @@
+:root {
+    /* --textFont: Inter, sans-serif; */
+}
+
+@font-face {
+    font-family: "Loyal sans";
+    src: url("/loyal_sans/LoyalSansRegularv1.otf") format("opentype");
+}
+
+h1 {
+    display: flex;
+    font-family: "Loyal sans", sans-serif;
+    font-size: var(--titleFontSize);
+    color: var(--titleFontColor);
+    font-weight: var(--titleFontWeight);
+    /* border: 2px solid red; */
+    text-align: center;
+    /* z-index: 2; */
+    /* letter-spacing: 3px; */
+    flex-wrap: nowrap;
+    /* overflow: hidden; */
+    margin: 0;
+    /* min-width: 1240px; */
+    padding: 0 10px 0 10px;
+    /* margin-bottom: -50px; */
+}

@@ -1,0 +1,140 @@
+:root {
+    --componentColor: rgba(0, 0, 0, 1);
+    --navBarColor: rgba(0, 0, 0, 0.9);
+    --searchColor: rgb(171, 169, 169);
+    --searchHoverColor: rgb(196, 194, 194);
+    --textFont: Inter, sans-serif;
+    --textSize: 20px;
+    --fontWeight: 500;
+    --titleFontWeight: 100;
+    --fontColor: #828282;
+    --titleFontSize: 160px;
+    --titleFontColor: rgb(255, 255, 255);
+    --secondaryColor: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    place-items: center;
+    /* min-width: 320px; */
+    min-height: 100vh;
+}
+
+#app {
+    background-color: var(--componentColor);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    min-width: 320px;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 100px; */
+
+    /* border: 2px solid red; */
+}
+.header {
+    /* border: 2px solid red; */
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    align-items: end;
+    /* width: 99.545%; */
+    width: 100%;
+    /* height: 70px; */
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.hero {
+    padding-top: 15%;
+}
+.title {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+    /* border: 2px solid blue; */
+    margin-bottom: -5%;
+    z-index: 1;
+    font-size: 12vw;
+}
+.myself {
+    position: relative;
+    /* bottom: -100%; */
+    width: 60%;
+    max-width: 590px;
+    z-index: 0;
+    animation: slideIn 2s ease forwards;
+
+    /* border: 2px solid blue; */
+}
+
+@keyframes slideIn {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+.subtitle {
+    /* padding-top: 20px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 10px;
+    /* border: 2px solid blue; */
+    margin-top: 20px;
+    font-size: 8vw;
+}
+.subtitle > p {
+    font-size: 6vw;
+}
+.buttonCTO {
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.about {
+    gap: 60px;
+    position: relative;
+}
+
+.skillsChartContainer {
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+.about > h2 {
+    font-size: 12vw;
+}
+.projects > h2 {
+    font-size: 12vw;
+}
+.contact > h2 {
+    font-size: 12vw;
+}
+
+@media (max-width: 900px) {
+    .contactButtonContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .hero {
+        padding-top: 20%;
+    }
+}
