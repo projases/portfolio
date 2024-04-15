@@ -1,4 +1,4 @@
-import { createClient } from "/node_modules/.vite/deps/pexels.js?v=6e07c4d5";
+import { createClient } from "pexels"; //node_modules/.vite/deps/pexels.js?v=6e07c4d5";
 
 export function getPexelsAPI() {
   const client = createClient(
