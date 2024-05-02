@@ -1,5 +1,5 @@
 import "./projects.css";
-import { getPexelsAPI } from "./pexelAPI/pexelAPI";
+import { getPexelsAPI } from "./pexelAPI/pexelAPI.js";
 
 const title = "My Projects";
 
