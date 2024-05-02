@@ -1,10 +1,10 @@
 import "./contact.css";
-import { mediumButton } from "../hero/button/button";
+import { createButtonSanti } from "../hero/button/button";
 import { contactInfo } from "../../data/data";
 
 export function contact() {
   const buttonsText = contactInfo.buttonTexts
-    .map((text) => mediumButton(text))
+    .map((text) => createButtonSanti(text, "m", "m_buttonCTO"))
     .join("");
   const contact = `
     <section class="contact">

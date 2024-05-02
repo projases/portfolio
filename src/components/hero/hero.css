@@ -3,12 +3,102 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* min-height: 100%; */
     align-items: center;
     justify-content: center;
-    /* padding-top: 100px; */
-    /* padding-bottom: 10px; */
-    /* flex-wrap: nowrap; */
-    /* overflow: hidden; */
-    /* gap: 20px; */
+}
+
+h1 {
+    /* display: flex; */
+    font-family: "Loyal sans", sans-serif;
+    font-size: var(--titleFontSize);
+    color: var(--titleFontColor);
+    font-weight: var(--titleFontWeight);
+    /* border: 2px solid red; */
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    /* width: 90%; */
+}
+/* @font-face { */
+/*     font-family: "Loyal sans"; */
+/*     src: url("/loyal_sans/LoyalSansRegularv1.otf") format("opentype"); */
+/* } */
+
+span {
+    color: var(--fontColor);
+    font-weight: var(--slashFontWeight);
+}
+
+p {
+    font-family: "Loyal sans", sans-serif;
+    font-style: italic;
+    font-size: var(--subtitleFontSize);
+    color: var(--titleFontColor);
+    font-weight: var(--titleFontWeight);
+    text-align: center;
+    letter-spacing: 6px;
+    margin: 0;
+}
+.hero {
+    padding-top: 15%;
+}
+/* .title { */
+/*     display: flex; */
+/*     justify-items: center; */
+/*     align-items: center; */
+/*     padding: 0; */
+/*     /\* border: 2px solid blue; *\/ */
+/*     margin-bottom: -5%; */
+/*     z-index: 1; */
+/*     font-size: 12vw; */
+/* } */
+.myself {
+    position: relative;
+    width: 60%;
+    max-width: 590px;
+    z-index: 0;
+    animation: slideIn 2s ease forwards;
+    top: -60px;
+    /* border: 2px solid blue; */
+}
+
+@keyframes slideIn {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+.subtitle {
+    /* padding-top: 20px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--subtitleFontSize);
+    /* justify-content: center; */
+    gap: 10px;
+    margin-top: 20px;
+}
+.buttonCTO {
+    margin-top: 20px;
+    z-index: 2;
+}
+@media (max-width: 600px) {
+    h1 {
+        /* width: 500px; */
+        font-size: 5em !important;
+        paddingt-top: 10%;
+    }
+
+    .subtitle {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    hero {
+        padding-top: 20% !important;
+    }
 }

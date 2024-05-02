@@ -57,11 +57,11 @@ button:hover {
     background: var(--primaryColor);
 }
 
-.buttonCTO:hover svg {
+.s_buttonCTO:hover svg {
     stroke-dashoffset: -500;
 }
 
-.mediumButtonCTO:hover svg {
+.m_buttonCTO:hover svg {
     stroke-dashoffset: -750;
 }
 

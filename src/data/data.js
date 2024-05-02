@@ -4,13 +4,13 @@ export const aboutMarkUp = {
   buttonTexts: ["Download CV", "Contact me", "Projects", "Skills"],
 };
 
-// export const heroMarkUp = {
-//   "hero",
-//   "title",
-//   "subtitle",
-//   "/portfolio.jpeg",
-//   "My Projects",
-// };
+export const heroMarkUp = {
+  title: "Pablo Rojas / Developer",
+  imgSrc: "/portfolio.jpeg",
+  subtitle: ["HTML", "CSS", "React", "Javascript", "Express", "MongoDB"],
+  buttonText: "My Projects",
+};
+
 // ---------------------------data.js--------------------------------
 export const skillsData = {
   labels: ["HTML/CSS", "React", "Javascript", "Express/MongoDB"],

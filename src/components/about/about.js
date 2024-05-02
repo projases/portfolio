@@ -1,6 +1,6 @@
 import "./about.css";
 import { title } from "../hero/title/title";
-import { mediumButton } from "../hero/button/button";
+import { createButtonSanti} from "../hero/button/button";
 
 export function about(options = {}) {
   const {
@@ -10,7 +10,7 @@ export function about(options = {}) {
     // buttonClassName = "aboutButton",
   } = options;
 
-  const buttons = buttonTexts.map((text) => mediumButton(text)).join("");
+  const buttons = buttonTexts.map((text) => createButtonSanti(text, "m", "m_buttonCTO")).join("");
   const about = `
     <section class = ${className}>
       ${title("2", "", titleName)}

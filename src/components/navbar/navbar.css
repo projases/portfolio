@@ -21,6 +21,6 @@ a {
     color: var(--fontColor);
 }
 
-a:hover {
+li a:hover {
     cursor: pointer;
 }

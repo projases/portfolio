@@ -6,9 +6,9 @@ window.scrollToSection = scrollToSection;
 export function navbar(navClass) {
   const navbar = `
     <ul class=${navClass}>
-    <a href="#" onclick="scrollToSection('.hero')">Home</a>
-    <a href="#" onclick="scrollToSection('.about')">About</a>
-    <a href="#" onclick="scrollToSection('.projects')">Projects</a>
+    <li><a href="#" onclick="scrollToSection('.hero')">Home</a><li/>
+    <li><a href="#" onclick="scrollToSection('.about')">About</a><li/>
+    <li><a href="#" onclick="scrollToSection('.projects')">Projects</a><li/>
     </ul>
   `;
   return navbar;

@@ -5,6 +5,8 @@ import { skillsData } from "../../data/data";
 
 export function skillsChartComponent() {
   // create container for the skills chart
+  const chartSection = document.createElement("section");
+  chartSection.classList.add("chartSection");
   const skillsChartContainer = document.createElement("div");
   skillsChartContainer.classList.add("skillsChartContainer");
   // create close button for the skills chart
@@ -15,11 +17,12 @@ export function skillsChartComponent() {
   // create canvas element for the skills chart
   const skillChart = document.createElement("canvas");
   skillChart.setAttribute("id", "skillsChart");
-  skillChart.setAttribute("width", "400");
-  skillChart.setAttribute("height", "400");
+  skillChart.setAttribute("width", "300px");
+  skillChart.setAttribute("height", "300px");
   //append elements
   skillsChartContainer.append(skillChart);
   skillsChartContainer.append(closeButton);
+  chartSection.append(skillsChartContainer);
   // await new Promise((resolve) => setTimeout(resolve));
   // create the skills chart
   // try {
@@ -30,10 +33,11 @@ export function skillsChartComponent() {
   // }
   createSkillsChart("skillsChart", skillsData);
   closeButton.addEventListener("click", () => {
-    skillsChartContainer.style.display = "none";
+    chartSection.style.display = "none";
+    chartSection.style.backdropFilter = "blur(0px)";
     const aboutSection = document.querySelector(".about");
-    aboutSection.classList.remove("blurred");
+    // aboutSection.classList.remove("blurred");
   });
 
-  return skillsChartContainer;
+  return chartSection;
 }

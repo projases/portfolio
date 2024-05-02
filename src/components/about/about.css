@@ -1,10 +1,16 @@
 .about {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     min-height: 100svh;
     gap: 40px;
     padding-top: 0;
+    background-color: var(--componentColor);
+    padding: 20px;
+
+    /* border: 2px solid red; */
 }
 
 h2 {

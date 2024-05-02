@@ -7,7 +7,28 @@
     font-family: "Loyal sans";
     src: url("/loyal_sans/LoyalSansRegularv1.otf") format("opentype");
 }
+.title {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+    /* border: 2px solid blue; */
+    margin-bottom: -5%;
+    z-index: 1;
+    font-size: 12vw;
+}
 
+
+.myself {
+    position: relative;
+    top: -60px;
+    width: 60%;
+    max-width: 590px;
+    z-index: 0;
+    animation: slideIn 2s ease forwards;
+
+    /* border: 2px solid blue; */
+}
 span {
     color: var(--fontColor);
     font-weight: var(--slashFontWeight);
@@ -22,4 +43,23 @@ p {
     text-align: center;
     letter-spacing: 6px;
     margin: 0;
+}
+.subtitle {
+    /* padding-top: 20px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 10px;
+    /* border: 2px solid blue; */
+    margin-top: 20px;
+    font-size: 8vw;
+}
+/* .subtitle > p { */
+/*     font-size: 6vw; */
+/* } */
+.buttonCTO {
+    margin-top: 20px;
+    z-index: 2;
 }

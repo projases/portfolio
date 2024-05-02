@@ -1,13 +1,21 @@
-.skillsChartContainer {
+.chartSection {
     display: none;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+    width: 100%;
+    min-height: 100svh;
+}
+.skillsChartContainer {
+    display: flex;
     position: absolute;
     /* border: 2px solid blue; */
     background-color: var(--searchColor);
-    /* border-radius: 10px; */
     padding: 40px 20px 40px 20px;
-    /* width: 100%; */
-    width: 400px;
-    height: 400px;
+    width: 80%;
+    max-width: 400px;
+    max-height: 400px;
+    z-index: 1;
 }
 
 .closeButton {
@@ -23,7 +31,8 @@
     transform: scale(1.2);
 }
 #skillsChart {
-    /* width: 400px; */
-    /* height: 400px; */
+    width: 100%;
+    height: 100;
     /* border: 2px solid blue; */
+    /* box-sizing: content-box; !!important */
 }

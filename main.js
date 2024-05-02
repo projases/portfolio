@@ -8,26 +8,27 @@ import { projects } from "./src/components/projectsSection/projects";
 import { parallax } from "./src/components/parallax/parallax";
 import { contact } from "./src/components/contact/contact";
 import { footer } from "./src/components/footer/footer";
+import { heroMarkUp } from "./src/data/data";
 
 const app = document.querySelector("#app");
 const navi = document.createElement("div");
 navi.innerHTML = navbar("navbar");
 navi.classList.add("header");
 document.body.append(navi);
-const skillsChartContainer = skillsChartComponent();
+const skillSection = skillsChartComponent();
 
-const heroMarkUp = hero(
-  "hero",
-  "title",
-  "subtitle",
-  "/portfolio.jpeg",
-  "My Projects",
-);
-
-app.insertAdjacentHTML("beforeend", heroMarkUp);
+// const heroMarkUp = hero(
+//   "hero",
+//   "title",
+//   "subtitle",
+//   "/portfolio.jpeg",
+//   "My Projects",
+// );
+hero(app, heroMarkUp);
+// app.insertAdjacentHTML("beforeend", heroMarkUp);
 app.insertAdjacentHTML("beforeend", about(aboutMarkUp));
-app.append(skillsChartContainer);
 const aboutSection = document.querySelector(".about");
+aboutSection.append(skillSection);
 const skillsButtonContainer = document.querySelector(".aboutButtonContainer");
 const specificButton = skillsButtonContainer.querySelector(
   "button:nth-child(4)",
@@ -35,8 +36,10 @@ const specificButton = skillsButtonContainer.querySelector(
 // const skill = document.querySelector(".aboutButtonContainer");
 specificButton.addEventListener("click", () => {
   // alert("Skills button clicked!");
-  aboutSection.classList.add("blurred");
-  skillsChartContainer.style.display = "flex";
+  // aboutSection.classList.add("blurred");
+  // projects.classList.add("blurred");
+  skillSection.style.display = "flex";
+  skillSection.style.backdropFilter = "blur(5px)";
 });
 
 projects()
