@@ -8,7 +8,7 @@ export async function projects() {
     const { client, query, perPage } = getPexelsAPI();
     const response = await client.photos.search({ query, per_page: perPage });
     const photos = response.photos;
-    console.log(response);
+    // console.log(response);
 
     const projects = photos
       .map(
