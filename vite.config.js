@@ -9,7 +9,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html')
       },
-      external: ['/node_modules/.vite/deps/pexels.js?v=6e07c4d5']
+      external: ['pexels']
     }
   },
   server: {
