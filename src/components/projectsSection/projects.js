@@ -1,13 +1,13 @@
 import "./projects.css";
-import { getPexelsAPI } from "./pexelAPI/pexelAPI.js";
+import { getUnsplashAPI} from "./pexelAPI/pexelAPI.js";
 
 const title = "My Projects";
 
 export async function projects() {
   try {
-    const { client, query, perPage } = getPexelsAPI();
-    const response = await client.photos.search({ query, per_page: perPage });
-    const photos = response.photos;
+    const { unsplash, query, perPage } = getUnsplashAPI();
+    const response = await unsplash.get(`search/photos?query=${query}&per_page=${perPage}`);
+    const photos = response.data.results;
     // console.log(response);
 
     const projects = photos
@@ -15,8 +15,8 @@ export async function projects() {
         (photo, index) => `
       <div class = "project">
         <h3>Project ${index + 1}</h3>
-        <img src = ${photo.src.medium} alt = "project ${index + 1}" />
-        <p>${photo.alt || "nein"}</p>
+        <img src = ${photo.urls.small} alt = "project ${index + 1}" />
+        <p>${photo.description || "nein"}</p>
       </div>`,
       )
       .join("");

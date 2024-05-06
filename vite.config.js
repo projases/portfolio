@@ -16,4 +16,4 @@ export default defineConfig({
     base: './',
     port: 3000
   }
-});
+}) ;

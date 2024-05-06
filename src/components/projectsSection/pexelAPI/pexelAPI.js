@@ -1,11 +1,20 @@
-import { createClient } from "pexels"; //node_modules/.vite/deps/pexels.js?v=6e07c4d5";
+import axios from "axios";
 
-export function getPexelsAPI() {
-  const client = createClient(
-    "YXna99vPo7Rw8olvv2nigXAL6jUMYU3do1El29JoUigM1gxY49cgtP3p",
-  );
-  const query = "computer";
+// Function to get Unsplash API configuration
+export function getUnsplashAPI() {
+  // Create an Axios instance with Unsplash base URL and your access key
+  const unsplash = axios.create({
+    baseURL: "https://api.unsplash.com/",
+    headers: {
+      Authorization: `Client-ID FPU4NrLT1z3ylxu8t4SM0ZQQZd7Ge5hUvEa25jfhdrE`, // Unsplash access key
+    },
+  });
+
+  const query = "wireframe";
   const perPage = 6;
 
-  return { client, query, perPage };
+  // Return the Axios instance, query, and perPage values
+  return { unsplash, query, perPage };
 }
+
+// Functi
