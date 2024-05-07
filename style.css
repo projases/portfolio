@@ -1,14 +1,19 @@
+@font-face {
+    font-family: "Loyal sans";
+    src: url("/loyal_sans/LoyalSansRegularv1.otf") format("opentype");
+}
 :root {
     --componentColor: rgba(0, 0, 0, 1);
     --navBarColor: rgba(0, 0, 0, 0.9);
     --searchColor: rgb(171, 169, 169);
     --searchHoverColor: rgb(196, 194, 194);
     --textFont: Inter, sans-serif;
+    --titleFont: "Loyal sans", sans-serif;
     --textSize: 20px;
     --fontWeight: 500;
     --titleFontWeight: 100;
     --fontColor: #828282;
-    --titleFontSize: 160px;
+    --titleFontSize: 12vw;
     --titleFontColor: rgb(255, 255, 255);
     --secondaryColor: rgb(255, 255, 255);
     --subtitleFontSize: 30px;
@@ -67,10 +72,6 @@ body {
     filter: blur(5px);
 }
 
-.about > h2 {
-    font-size: 12vw;
-}
-
 .chartSection{
     position: absolute;
     top: 0;
@@ -81,12 +82,7 @@ body {
     /* backdrop-filter: blur(5px); /\* Apply blur effect to the background *\/ */
     background-color: transparent;
 }
-.projects > h2 {
-    font-size: 12vw;
-}
-.contact > h2 {
-    font-size: 12vw;
-}
+
 
 @media (max-width: 900px) {
     .contactButtonContainer {

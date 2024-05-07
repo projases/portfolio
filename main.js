@@ -17,15 +17,7 @@ navi.classList.add("header");
 document.body.append(navi);
 const skillSection = skillsChartComponent();
 
-// const heroMarkUp = hero(
-//   "hero",
-//   "title",
-//   "subtitle",
-//   "/portfolio.jpeg",
-//   "My Projects",
-// );
 hero(app, heroMarkUp);
-// app.insertAdjacentHTML("beforeend", heroMarkUp);
 app.insertAdjacentHTML("beforeend", about(aboutMarkUp));
 const aboutSection = document.querySelector(".about");
 aboutSection.append(skillSection);

@@ -1,5 +1,6 @@
 // ---------------------------about.js--------------------------------
 export const aboutMarkUp = {
+  className: "about",
   titleName: "My Developing Philosophy",
   buttonTexts: ["Download CV", "Contact me", "Projects", "Skills"],
 };

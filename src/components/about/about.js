@@ -1,19 +1,18 @@
 import "./about.css";
-import { title } from "../hero/title/title";
+// import { title } from "../hero/title/title";
+import { aboutMarkUp } from "../../data/data";
 import { createButtonSanti} from "../hero/button/button";
 
-export function about(options = {}) {
-  const {
+export function about({
     className = "about",
     titleName = "aboutTitle",
     buttonTexts = ["Download CV", "Contact me", "Projects", "Skills"],
-    // buttonClassName = "aboutButton",
-  } = options;
+}){
 
   const buttons = buttonTexts.map((text) => createButtonSanti(text, "m", "m_buttonCTO")).join("");
   const about = `
     <section class = ${className}>
-      ${title("2", "", titleName)}
+      <h2>${titleName}</h2>
       <div class = "aboutButtonContainer">
         ${buttons}
       </div>

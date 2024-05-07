@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Loyal sans";
+    src: url("/loyal_sans/LoyalSansRegularv1.otf") format("opentype");
+}
 .about {
     display: flex;
     flex-direction: column;
@@ -5,18 +9,18 @@
     align-items: center;
     width: 100%;
     min-height: 100svh;
-    gap: 40px;
+    gap: 80px;
     padding-top: 0;
     background-color: var(--componentColor);
-    padding: 20px;
+    /* padding: 20px; */
 
     /* border: 2px solid red; */
 }
 
-h2 {
+.about h2 {
     display: flex;
     font-family: "Loyal sans", sans-serif;
-    font-size: calc(var(--titleFontSize) - 40px);
+    font-size: var(--titleFontSize);
     color: var(--titleFontColor);
     font-weight: var(--titleFontWeight);
     /* border: 2px solid red; */
@@ -46,5 +50,10 @@ h2 {
     .aboutButtonContainer {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .about h2 {
+        font-size: 5em !important;
     }
 }

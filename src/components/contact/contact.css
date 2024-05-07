@@ -10,9 +10,10 @@
 .contactTitle {
     display: flex;
     font-family: "Loyal sans", sans-serif;
-    font-size: calc(var(--titleFontSize) - 40px);
+    /* font-size: calc(var(--titleFontSize) - 40px); */
     color: var(--titleFontColor);
     font-weight: var(--titleFontWeight);
+    font-size: var(--titleFontSize);
     /* border: 2px solid red; */
     justify-content: center;
     align-items: center;
@@ -33,5 +34,11 @@
     .contactButtonContainer {
         flex-direction: column;
         gap: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .contactTitle {
+        font-size: 5em !important;
+        text-align: center;
     }
 }
